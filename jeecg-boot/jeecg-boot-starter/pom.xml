@@ -16,12 +16,7 @@
     </properties>
 
     <modules>
-        <module>jeecg-boot-starter-cloud</module>
-        <module>jeecg-boot-starter-job</module>
         <module>jeecg-boot-starter-lock</module>
-        <module>jeecg-boot-starter-rabbitmq</module>
-        <module>jeecg-boot-starter-shardingsphere</module>
-        <module>jeecg-boot-starter-seata</module>
     </modules>
     <dependencies>
         <!--jeecg-tools-->

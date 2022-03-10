@@ -14,16 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>org.jeecgframework.boot</groupId>
-            <artifactId>jeecg-boot-base-core</artifactId>
+            <artifactId>jeecg-system-local-api</artifactId>
         </dependency>
-        <!--引入微服务启动依赖 starter
-      <dependency>
-          <groupId>org.jeecgframework.boot</groupId>
-          <artifactId>jeecg-boot-starter-cloud</artifactId>
-      </dependency>
-        <dependency>
-            <groupId>org.jeecgframework.boot</groupId>
-            <artifactId>jeecg-boot-starter-job</artifactId>
-        </dependency>-->
     </dependencies>
 </project>

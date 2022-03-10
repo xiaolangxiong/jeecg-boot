@@ -1,6 +1,8 @@
 package org.jeecg.modules.demo.mock;
 
 import com.alibaba.fastjson.JSON;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.jeecg.common.api.vo.Result;
@@ -19,6 +21,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/mock/api")
+@Api(tags="mock模拟")
 @Slf4j
 public class MockController {
 
@@ -30,18 +33,21 @@ public class MockController {
 	 * @param filename
 	 * @return
 	 */
+	@ApiOperation("/json/{filename}")
 	@RequestMapping(value = "/json/{filename}", method = RequestMethod.GET)
 	public String getJsonData(@PathVariable("filename") String filename) {
 		String jsonpath = "classpath:org/jeecg/modules/demo/mock/json/"+filename+".json";
 		return readJson(jsonpath);
 	}
 
+	@ApiOperation("/asynTreeList")
 	@GetMapping(value = "/asynTreeList")
 	public Result asynTreeList(String id) {
 		String json = readJson(JSON_PATH + "/asyn_tree_list_" + id + ".json");
 		return Result.OK(JSON.parseArray(json));
 	}
 
+	@ApiOperation("/user")
 	@GetMapping(value = "/user")
 	public String user() {
 		return readJson("classpath:org/jeecg/modules/demo/mock/json/user.json");
@@ -51,26 +57,31 @@ public class MockController {
 	 * 老的登录获取用户信息接口
 	 * @return
 	 */
+	@ApiOperation("获取用户信息")
 	@GetMapping(value = "/user/info")
 	public String userInfo() {
 		return readJson("classpath:org/jeecg/modules/demo/mock/json/user_info.json");
 	}
 
+	@ApiOperation("获取用户角色")
 	@GetMapping(value = "/role")
 	public String role() {
 		return readJson("classpath:org/jeecg/modules/demo/mock/json/role.json");
 	}
 
+	@ApiOperation("service")
 	@GetMapping(value = "/service")
 	public String service() {
 		return readJson("classpath:org/jeecg/modules/demo/mock/json/service.json");
 	}
 
+	@ApiOperation("permission")
 	@GetMapping(value = "/permission")
 	public String permission() {
 		return readJson("classpath:org/jeecg/modules/demo/mock/json/permission.json");
 	}
 
+	@ApiOperation("/permission/no-pager")
 	@GetMapping(value = "/permission/no-pager")
 	public String permission_no_page() {
 		return readJson("classpath:org/jeecg/modules/demo/mock/json/permission_no_page.json");
@@ -79,6 +90,7 @@ public class MockController {
 	/**
 	 * 省市县
 	 */
+
 	@GetMapping(value = "/area")
 	public String area() {
 		return readJson("classpath:org/jeecg/modules/demo/mock/json/area.json");
