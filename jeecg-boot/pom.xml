@@ -56,10 +56,6 @@
         <module>jeecg-boot-base</module>
         <module>jeecg-boot-module-demo</module>
         <module>jeecg-boot-module-system</module>
-		<module>jeecg-boot-starter</module>
-        <!--需要微服务，请打开
-        <module>jeecg-boot-starter</module>
-        <module>jeecg-cloud-module</module>-->
 	</modules>
 
 	<distributionManagement>
@@ -156,66 +152,7 @@
 				<artifactId>jeecg-system-local-api</artifactId>
 				<version>${jeecgboot.version}</version>
 			</dependency>
-			<!-- system 微服务 api -->
-			<dependency>
-				<groupId>org.jeecgframework.boot</groupId>
-				<artifactId>jeecg-system-cloud-api</artifactId>
-				<version>${jeecgboot.version}</version>
-			</dependency>
 
-            <!--微服务模块-->
-            <dependency>
-                <groupId>org.jeecgframework.boot</groupId>
-                <artifactId>jeecg-boot-starter-cloud</artifactId>
-                <version>${jeecgboot.version}</version>
-            </dependency>
-
-			<!--xxl-job定时任务-->
-			<dependency>
-				<groupId>org.jeecgframework.boot</groupId>
-				<artifactId>jeecg-boot-starter-job</artifactId>
-				<version>${jeecgboot.version}</version>
-			</dependency>
-
-			<!--redis分布式锁-->
-			<dependency>
-				<groupId>org.jeecgframework.boot</groupId>
-				<artifactId>jeecg-boot-starter-lock</artifactId>
-				<version>${jeecgboot.version}</version>
-			</dependency>
-
-			<!--rabbitmq消息队列-->
-			<dependency>
-				<groupId>org.jeecgframework.boot</groupId>
-				<artifactId>jeecg-boot-starter-rabbitmq</artifactId>
-				<version>${jeecgboot.version}</version>
-			</dependency>
-
-
-			<!-- 七牛云SDK -->
-			<dependency>
-				<groupId>com.qiniu</groupId>
-				<artifactId>qiniu-java-sdk</artifactId>
-				<version>${qiniu-java-sdk.version}</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>okhttp</artifactId>
-						<groupId>com.squareup.okhttp3</groupId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<!-- dom4j -->
-			<dependency>
-				<groupId>dom4j</groupId>
-				<artifactId>dom4j</artifactId>
-				<version>${dom4j.version}</version>
-			</dependency>
-			<!-- redisson -->
-			<dependency>
-				<groupId>org.redisson</groupId>
-				<artifactId>redisson</artifactId>
-				<version>${redisson.version}</version>
-			</dependency>
 
 			<!-- guava工具类 -->
 			<dependency>
