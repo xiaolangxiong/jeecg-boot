@@ -136,7 +136,7 @@ spring:
         connectionProperties: druid.stat.mergeSql\=true;druid.stat.slowSqlMillis\=5000
       datasource:
         master:
-          url: jdbc:postgresql://localhost:5432/pmclub?useUnicode=true&characterEncoding=utf8&currentSchema=public&stringtype=unspecified
+          url: jdbc:postgresql://localhost:5432/2PMClub?useUnicode=true&characterEncoding=utf8&currentSchema=public&stringtype=unspecified
           username: postgres
           password: kk8638761
           driver-class-name: org.postgresql.Driver
