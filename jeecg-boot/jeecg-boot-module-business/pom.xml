@@ -9,7 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jeecg-boot-module-demo</artifactId>
+    <groupId>com.boxiu</groupId>
+    <artifactId>jeecg-boot-module-business</artifactId>
 
     <dependencies>
         <dependency>
@@ -17,4 +18,5 @@
             <artifactId>jeecg-system-local-api</artifactId>
         </dependency>
     </dependencies>
+
 </project>

@@ -58,10 +58,10 @@
 		</dependency>
 
 
-		<!-- DEMO 示例模块【微服务启动请注释掉】 -->
+		<!-- 业务模块 -->
 		<dependency>
-			<groupId>org.jeecgframework.boot</groupId>
-			<artifactId>jeecg-boot-module-demo</artifactId>
+			<groupId>com.boxiu</groupId>
+			<artifactId>jeecg-boot-module-business</artifactId>
 			<version>3.1.0</version>
 		</dependency>
 
