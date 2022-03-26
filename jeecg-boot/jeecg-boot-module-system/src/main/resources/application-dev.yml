@@ -51,7 +51,7 @@ spring:
             instanceId: AUTO
           jobStore:
             class: org.quartz.impl.jdbcjobstore.JobStoreTX
-            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
             tablePrefix: QRTZ_
             isClustered: true
             misfireThreshold: 60000
@@ -67,6 +67,11 @@ spring:
     time-zone:   GMT+8
   jpa:
     open-in-view: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
   activiti:
     check-process-definitions: false
     #启用作业执行器
@@ -131,10 +136,10 @@ spring:
         connectionProperties: druid.stat.mergeSql\=true;druid.stat.slowSqlMillis\=5000
       datasource:
         master:
-          url: jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
-          username: root
+          url: jdbc:postgresql://localhost:5432/pmclub?useUnicode=true&characterEncoding=utf8&currentSchema=public&stringtype=unspecified
+          username: postgres
           password: kk8638761
-          driver-class-name: com.mysql.cj.jdbc.Driver
+          driver-class-name: org.postgresql.Driver
           # 多数据源配置
           #multi-datasource1:
           #url: jdbc:mysql://localhost:3306/jeecg-boot2?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
