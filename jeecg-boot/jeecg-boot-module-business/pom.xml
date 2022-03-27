@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.boxiu</groupId>
+    <groupId>org.jeecgframework.boot</groupId>
     <artifactId>jeecg-boot-module-business</artifactId>
 
     <dependencies>

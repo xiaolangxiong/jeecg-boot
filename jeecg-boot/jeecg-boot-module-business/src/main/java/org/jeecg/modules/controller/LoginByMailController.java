@@ -1,6 +1,6 @@
-package com.boxiu.login.controller;
+package org.jeecg.modules.controller;
 
-import com.boxiu.login.service.MailService;
+import org.jeecg.modules.service.MailService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
