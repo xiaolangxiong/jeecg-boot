@@ -1,1 +1,1 @@
-先在pg建库，然后在建好的库中创建public模式，在public模式中执行脚本文件public.sql，即可。
+先在pg建库，库名是keepitup，然后在建好的库中创建public模式，在public模式中执行脚本文件public.sql，即可。

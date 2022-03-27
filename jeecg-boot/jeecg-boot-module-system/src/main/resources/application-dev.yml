@@ -25,16 +25,20 @@ spring:
       max-file-size: 10MB
       max-request-size: 10MB
   mail:
-    host: smtp.163.com
-    username: jeecgos@163.com
-    password: ??
+    host: smtp.qq.com
+    username: 3329642252@qq.com
+    password: mbhbpcjyhpdvcigj
     properties:
       mail:
+        debug: true
         smtp:
           auth: true
           starttls:
             enable: true
             required: true
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+    port: 465
   ## quartz定时任务,采用数据库方式
   quartz:
     job-store-type: jdbc
@@ -136,7 +140,7 @@ spring:
         connectionProperties: druid.stat.mergeSql\=true;druid.stat.slowSqlMillis\=5000
       datasource:
         master:
-          url: jdbc:postgresql://localhost:5432/2PMClub?useUnicode=true&characterEncoding=utf8&currentSchema=public&stringtype=unspecified
+          url: jdbc:postgresql://localhost:5432/keepitup?useUnicode=true&characterEncoding=utf8&currentSchema=public&stringtype=unspecified
           username: postgres
           password: kk8638761
           driver-class-name: org.postgresql.Driver
