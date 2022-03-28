@@ -73,7 +73,8 @@ public class ShiroConfig {
             }
         }
         // 配置不会被拦截的链接 顺序判断
-        filterChainDefinitionMap.put("/sys/loginByMail", "anon"); //通过邮件登录接口
+        filterChainDefinitionMap.put("/sys/applyLoginByMail", "anon"); //申请通过邮箱登陆
+        filterChainDefinitionMap.put("/sys/confirmLoginByMail", "anon"); //确认邮箱登陆
         filterChainDefinitionMap.put("/sys/cas/client/validateLogin", "anon"); //cas验证登录
         filterChainDefinitionMap.put("/sys/randomImage/**", "anon"); //登录验证码接口排除
         filterChainDefinitionMap.put("/sys/checkCaptcha", "anon"); //登录验证码接口排除
